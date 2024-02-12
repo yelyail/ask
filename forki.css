@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.contain {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2acac;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    font-family: Verdana, Tahoma, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.yes{
+    display: flex;
+    justify-content: left;
+    margin-left: 500px;
+    text-decoration: none;
+}
+.yesbtn{
+    width: 15%;
+    padding: 10px;
+    background-color: rgb(0, 132, 7);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.no{
+    display: flex;
+    justify-content: left;
+    margin-top: -46px;
+    margin-left: 800px;
+    text-decoration: none;
+}
+.nobtn{
+    width: 25%;
+    padding: 10px;
+    background-color: rgb(246, 8, 8,0.7);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+#mess {
+    display: none; 
+    position: absolute;
+    justify-content: left;
+    margin-left: 450px;
+    margin-top: 20px;
+    color: #721c24; 
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+.no:hover + #mess {
+    display: block; 
+}
+input#open {
+    display: none;
+}
+.valentines-day-card {
+    position: relative;
+    width: 300px;
+    height:300px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: .3s;
+}
+.card-front {
+    position: relative;
+    background-color: #fff0f3;
+    width: 300px;
+    height:300px;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 30px 0 50px rgba(0,0,0,0.3);
+    transition: .3s;
+}
+.card-front:before {
+    content:"";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background-color: #d04e4e;
+    top: 10px;
+    left: 10px;
+}
+.card-inside {
+    position: absolute;
+    background-color: #fff0f3;
+    width: 300px;
+    height:300px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.22), 100px 20px 100px rgba(0,0,0,0.1);
+}
+.open {
+    position: absolute;
+    width: 300px;
+    height:300px;
+    left:0;
+    top:0;
+    background-color: transparent;
+    z-index:6;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fff0f321;
+}
+#open:checked ~ .card-front {
+    transform: rotateY(-155deg);
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+}
+#open:checked ~ .card-front:before {
+    z-index:5;
+    background-color: #fff0f3;
+    width:300px;
+    height:300px;
+    top:0;
+    left:0;
+   box-shadow: inset 100px 20px 100px rgba(0,0,0,.1), 30px 0 50px rgba(0,0,0,0.1);
+}
+.note {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background-color: #fff0f3;
+    top:75px;
+    left:50px;
+    color: #333;
+    font-size:30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.3));
+}
+.note:before, .note:after {
+    position: absolute;
+    content:"";
+    background-color: #ba1c1c;
+    width: 40px;
+    height:40px;
+}
+.note:before {
+    transform: rotate(-45deg);
+    top:-20px;
+    left:80px;
+}
+.note:after {
+    border-radius:50%;
+    top:-35px;
+    left:65px;
+    box-shadow:30px 0 #ba1c1c;
+}
+.text-one {
+    position: absolute;
+    color: #333;
+    font-size: 30px;
+    top:30px;
+    width:300px;
+    text-align: center;
+}
+.text-one:before, .text-one:after {
+    position: absolute;
+    left:5px;
+    text-align: center;
+    width:300px;
+}
+.text-one:before {
+    content:"Valentine's";
+    top:30px;
+    color: #d04e4e;
+}
+.text-one:after {
+    content:"day!";
+    top:60px;
+}
+.heart {
+    position: relative;
+    background-color: #d04e4e;
+    height: 60px;
+    width:60px;
+    top:180px;
+    left:120px;
+    transform: rotate(-45deg);
+    animation: .8s beat infinite;
+}
+.heart:before, .heart:after {
+    content:"";
+    background-color: #d04e4e;
+    border-radius:50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+}
+.heart:before {
+    top:-30px;
+    left:0;
+}
+.heart:after {
+    left:30px;
+    top:0;
+}
+.smile {
+    position: absolute;
+    width:30px;
+    height:15px;
+    background-color: #333;
+    z-index:1;
+    border-radius: 0 0 100px 100px;
+    top:200px;
+    left:135px;
+    overflow: hidden;
+}
+.smile:before {
+    content:"";
+    position: absolute;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    background-color: #030202;
+    top:5px;
+    left:5px;
+}
+.eyes {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #333;
+    width:10px;
+    height:10px;
+    z-index:1;
+    top:190px;
+    left:165px;
+    box-shadow: -40px 0 #333;
+    transform-origin: 50%;
+    animation: close 2s infinite;
+}
+@keyframes close {
+      0%, 100% {
+          transform: scale(1, .05);
+      }
+      5%, 95% {
+          transform: scale(1, 1);
+      }
+} 
+@keyframes beat {
+    0%, 40%, 100% {
+      transform: scale(1) rotate(-45deg);
+    }
+    25%, 60% {
+      transform: scale(1.1) rotate(-45deg);
+   }
+} 
+.baba{
+    width: 10%;
+    margin-top: 550px;
+    margin-left: -200px;
+    background-color: transparent;
+}
+.body-contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    background-color: #ec8282;
+}
+.openCard {
+    position: relative;
+    width: 250px;
+    height:350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+      transform: perspective(2500px);
+    transition: 1s;
+}
+.cardFront {
+    position: relative;
+    background-color: #ed8e8e;
+    width: 400px;
+    height:450px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,.2), 30px 0 50px rgba(0,0,0,0.4);
+    transition: .6s;
+}
+.happy {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    margin:30px; 
+    background-color: transparent;
+    font-size: 30px;
+    transition: .1s;
+}
+.heart {
+    position: absolute;
+}
+.heartOne, .heartTwo, .heartThree, .heartFour {
+    position: absolute;
+    width: 85px;
+    height:95px;
+    border-radius:50%;
+}
+.heartOne {
+    background-color: rgb(239, 71, 111, 0.7);
+    left:-10px;
+    top:50px;
+}
+.heartTwo {
+    background-color: rgb(6, 214, 160, 0.7);
+    left:50px;
+    top:20px;
+}
+.heartThree {
+    background-color: rgb(255, 209, 102, 0.7);
+    left:110px;
+    top:50px;
+}
+.heartFour {
+    background-color: rgb(17, 138, 178, 0.7);
+    left:170px;
+    top:20px;
+}
+.heartOne:before, .heartTwo:before, .heartThree:before, .heartFour:before {
+    content:"";
+    position: absolute;
+    width:1px;
+    height: 155px;
+    background-color: #ffd166;
+    top:95px;
+    left:43px;
+}
+.heartOne:after, .heartTwo:after, .heartThree:after, .heartFour:after {
+    content:"";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top:94px;
+    left:37px;
+}
+.heartOne:after {
+    border-bottom: 10px solid #ef476f;
+  }
+.heartTwo:after {
+    border-bottom: 10px solid #06d6a0;
+}
+.heartThree:after {
+    border-bottom: 10px solid #ffd166;
+}
+.heartFour:after {
+    border-bottom: 10px solid #118ab2;
+}
+.cardInside {
+    position: absolute;
+    background-color: #ed8e8e;
+    width: 400px;
+    height:450px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+}
+.text {
+    font-family: 'Brush Script MT', cursive;
+    margin: 20px;
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    left: 20px;
+}
+.text-1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+.name {
+    position: absolute;
+    width: 360px;
+    top:400px;
+    left: 280px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    color: #000000;
+}
+.openCard:hover {
+	transform: perspective(2500px) rotate(5deg);
+	box-shadow: inset 100px 20px 100px rgba(0,0,0,.2), 0 10px 100px rgba(0,0,0,0.5);
+}
+
+.openCard:hover .cardFront {
+  transform: rotateY(-160deg); 
+}
+
+.openCard:hover .happy {
+  visibility:hidden; 
+}
